@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <haed>
+        <meta charset="utf-8">
+
+        <title>div</title>
+        <style>
+            /*
+            div{background-color: red;}
+            */
+
+            /* id를 이용하여 css를 적용하는 방법
+               똑같은 id를 두개 이상의 태그에 적용하지 않음 
+               한 id는 하나의 태그에만 적용 
+               id앞에는 #을 붙힌다. */
+            #id1{
+                background-color: rgb(161, 92, 212);
+            }
+            #id2{
+                background-color: hotpink;
+            }
+            #id3{
+                background-color: rgb(176, 134, 206);
+            }
+            #id4{
+                color: blue;
+            }
+            /*  class 적용 : 여러 요소에 같은 효과 등을 지정하고자 할 때
+                클래스는 여러 요소(태그)에 지정할 수 있음. 여러클래스를 동시에 지정할수있음 
+                class앞에는 .을 붙힌다*/
+            .class1{
+                background-color : rgb(86, 197, 86);
+            }
+            .class2{
+                color: white;
+            }
+        </style>
+    </haed>
+
+    <body> <!-- div는 블록요소 , span은 인라인 요소-->
+        <!-- div 태그 : 영역을 나누고자 할 때 많이 사용
+            보통 div 태그에 id 또는 class를 부여하여 활용함 div안에 div사용할수 있음. 
+            
+            |블록 요소(Block Element) : 줄이 바뀜 <|> 인라인 요소(Inline Element) : 줄이 바뀌지 않음| -->
+        <!-- id는 모든 태그에 쓰일수 있음 자바 변수(대신)같은 것-->
+        <div id="id1">
+            div1 (id1 적용)                <!-- span 태그는 id나 class속성으로 두고 부분적으로 적용함-->
+            이 문장을 작성하면서 <span id="id3">인라인 요소를 사용하고</span> <div>인라인 요소에 id적용</div>
+        </div>
+        <div id="id2 id4"> <!-- id는 동시에 2개 적용이 불가능하고 'id2 id4'(한묶음으로)라는 id를 적용한 결과가됨-->
+            div2 (id는 중복적용 불가)
+        </div>
+        <div class="class1">
+            div3 (class1 적용)
+        </div>
+        <!-- class1, class2 적용-->
+        <div class="class1 class2">
+            div4 (class1 class2 적용)
+        </div>
+        <div>
+            <h2 class="class1"> 다른 div에 있는 h2</h2>
+        </div>
+    </body>
+
+</html>

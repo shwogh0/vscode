@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 폼태그에서 작성한 값을 전송 
+        action 속성 : form태그에서 작성한 값을 전송할 목적지
+                      보통은 백엔드에서 지정한 주소값을 사용함 
+        method 속성 : 백엔드로 데이터를 전송하는 방법(get/post) 
+                    GET :  목적지 주소값과 입력된 데이터가 주소에 노출됨.
+                    POST : 목적지 주소값만 보임-->
+    <form action="join" method="POST">
+        아이디 : <input type="text" name="id"> <br>
+        비밀번호 : <input type="password" name="password"> <br>
+        이메일 : <input type="text" name="email"> <br>
+        <!-- sumit : form 태그에 작성한 내용을 전부 action 속성값으로 전달 -->
+        <input type="submit" value="가입"> <!-- submit : 가입이라는 버튼이 생기며 누를경우 join에 값을 저장시킴--> <br>
+        
+
+
+    </form>
+    <!-- id : ㅁㅁ, password : aa 를 입력하고 가입버튼을 클릭했더니 도메인 주소는? -->
+    http://127.0.0.1:5500/2021-05-03/join?id=%E3%85%81%E3%85%81&password=aa
+    <!-- 값이 join?으로 왔고 id값은 %E3%85%81%E3%85%81 |&| password 값은 aa -->
+    join?id=%E3%85%81%E3%85%81&password=aa
+
+    <!-- 메소드 POST로 만든경우 -->
+    http://127.0.0.1:5500/2021-05-03/join
+
+    <!-- 다음에서 날씨를 검색했을 때 주소 값 -->
+    https://search.daum.net/search?w=tot&DA=YZR&t__nil_searchbox=btn&sug=&sugo=&sq=&o=&q=%EB%82%A0%EC%94%A8
+</body>
+</html>
