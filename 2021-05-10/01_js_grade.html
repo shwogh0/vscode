@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function select(){
+            var score = document.getElementById('score').value;
+            var grades;
+            if(score<=100){
+                if(score<=100 && score >=90){
+                    result = 'A학점입니다';
+                    grades = 'A';
+                }
+                if(score<90 && score>=80){
+                    result = 'B학점입니다';
+                    grades = 'B';
+                }
+                if(score<80 && score>=70){
+                    result = 'C학점입니다';
+                    grades = 'C';
+                }
+                if(score<70 && score>=60){
+                    result = 'D학점입니다';
+                    grades = 'D';
+                }
+                if(score<60){
+                    result = 'F학점입니다';
+                    grades = 'F';
+                }
+            }else{
+                result = '점수를 다시 입력해주세요.';
+            }
+            document.getElementById('result').innerHTML = result;
+            document.getElementById('grades').value = grades;
+            console.log(score);
+            console.log(grades);
+            console.log(result);
+
+        }
+    </script>
+</head>
+<body>
+    <h1>성적산출하기</h1>
+    점수 : <input type="text" id="score"> <br>
+    성적 : <input type="text" id="grades"> <br>
+    <button onclick="select()">성적??</button>
+    <div id="result">
+        성적출력
+    </div>
+</body>
+</html>

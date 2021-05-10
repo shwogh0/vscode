@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1(){
+            console.log('test1함수 호출');
+            var ele = document.getElementById('id1');
+            // value값은 선택한 값이 됨
+            console.log(ele.value);
+            // 선택한 값을 h2화면에 띄울수도 있음
+            document.getElementById('id2').innerHTML = ele.value;
+        }
+    </script>
+</head>
+<body>
+    <!-- onchange : 값이 바뀌는 동작이 됐을 때 함수 호출 -->
+    <select id="id1" onchange="test1()">
+        <option value="html">html</option>
+        <option value="css">css</option>
+        <option value="js">js</option>
+        <option value="java">java</option>
+    </select>
+    <h2 id="id2"></h2>
+</body>
+</html>
